@@ -6,4 +6,4 @@ import { ImovelController } from './imovel.controller';
   controllers: [ImovelController],
   providers: [imovelService],
 })
-export class UserModule {}
+export class ImovelModule {}

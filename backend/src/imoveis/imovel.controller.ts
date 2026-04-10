@@ -1,12 +1,18 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller,
+   Get, 
+   Post, 
+   Body, 
+   Patch, 
+   Param, 
+   Delete } from '@nestjs/common';
 import { imovelService } from './imovel.service';
 import { CreateImovelDto } from './dto/create-imovel.dto';
-import * as updateImovelDto from './dto/update-imovel.dto';
+import { UpdateImovelDto } from './dto/update-imovel.dto';
 
-@Controller('user')
+@Controller('imovel')
 export class ImovelController {
   imovelService: any;
-  constructor(private readonly userService: imovelService) {}
+  constructor() {}
 
   @Post()
   create(@Body() createImovelDto: CreateImovelDto) {
@@ -24,7 +30,7 @@ export class ImovelController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateImovelDto: updateImovelDto.UpdateImovelDto) {
+  update(@Param('id') id: string, @Body() updateImovelDto: UpdateImovelDto) {
     return this.imovelService.update(+id, updateImovelDto);
   }
 

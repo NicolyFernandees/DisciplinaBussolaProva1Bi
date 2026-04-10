@@ -4,6 +4,9 @@ import * as updateImovelDto from './dto/update-imovel.dto';
 
 @Injectable()
 export class imovelService {
+  signIn(username: any, password: any) {
+      throw new Error('Method not implemented.');
+  }
   create(createImovelDto: CreateImovelDto) {
 
     return 'Adicionado novo imovel';
@@ -13,7 +16,7 @@ export class imovelService {
     return `retorne todos imóveis`;
   }
 
-  findOne(id: number) {
+  findOne(username: string, String: StringConstructor, id: number) {
     return `retorne do #${id} do imóvel`;
   }
 

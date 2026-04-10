@@ -1,0 +1,7 @@
+  services:
+  db:
+  image: postgres
+  restart: always
+  enviroment configs: postgres_password= postgres
+  ports:
+  - 5432:5432

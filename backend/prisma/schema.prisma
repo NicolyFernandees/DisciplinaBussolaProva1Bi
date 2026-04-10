@@ -1,0 +1,14 @@
+datasource db {
+  provider = "postgresql"
+}
+
+generator client {
+  provider = "prisma-client"
+  moduleFormat  = "cjs"
+}
+model imovel{
+    id Int @id @default (autoincrement())
+    descricao String
+    dataCompra DateTime
+    endereco String
+}
